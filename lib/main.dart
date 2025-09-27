@@ -14,8 +14,14 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'El Ahorcado',
       debugShowCheckedModeBanner: false,
-      theme: ThemeData(primarySwatch: Colors.deepPurple, useMaterial3: true),
-      home: JuegoAhorcadoPage(),
+      theme: ThemeData(
+        // CORREGIDO: Usamos ColorScheme en lugar de primarySwatch
+        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+        // fontFamily y primarySwatch eliminados.
+        useMaterial3: true,
+      ),
+      // Agregamos el 'const' que faltaba aquí
+      home: const JuegoAhorcadoPage(),
     );
   }
 }
