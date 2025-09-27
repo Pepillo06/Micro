@@ -1,11 +1,10 @@
-
 import 'package:flutter/material.dart';
 import 'juego_ahorcado_page.dart';
 
-import 'package:shared_preferences/shared_preferences.dart'; 
+import 'package:shared_preferences/shared_preferences.dart';
 
 void main() {
-  WidgetsFlutterBinding.ensureInitialized(); 
+  WidgetsFlutterBinding.ensureInitialized();
   runApp(const MyApp());
 }
 
@@ -16,12 +15,9 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'El Ahorcado',
-      debugShowCheckedModeBanner: false, 
-      theme: ThemeData(
-        primarySwatch: Colors.deepPurple, 
-        useMaterial3: true,
-      ),
-      home: JuegoAhorcadoPage(), 
+      debugShowCheckedModeBanner: false,
+      theme: ThemeData(primarySwatch: Colors.deepPurple, useMaterial3: true),
+      home: JuegoAhorcadoPage(),
     );
   }
 }
