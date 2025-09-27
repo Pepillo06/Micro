@@ -13,9 +13,12 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'El Ahorcado',
-      debugShowCheckedModeBanner: false,
-      theme: ThemeData(primarySwatch: Colors.deepPurple, useMaterial3: true),
-      home: JuegoAhorcadoPage(),
+      debugShowCheckedModeBanner: false, 
+      theme: ThemeData(
+        primarySwatch: Colors.deepPurple, 
+        useMaterial3: true,
+      ),
+      home: JuegoAhorcadoPage(), 
     );
   }
 }
