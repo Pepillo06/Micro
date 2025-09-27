@@ -1,31 +1,27 @@
 
 import 'package:flutter/material.dart';
-import 'package:provider/provider.dart'; 
-import 'models/logica_juego.dart';      // Importa la lógica
-import 'screens/screen_juego.dart';      // Importa la pantalla
+import 'juego_ahorcado_page.dart';
+
+import 'package:shared_preferences/shared_preferences.dart'; 
 
 void main() {
-  runApp(
-    // Envolvemos la app en el provider
-    ChangeNotifierProvider(
-      create: (context) => LogicaJuego(),
-      child: const AhorcadoApp(),
-    ),
-  );
+  WidgetsFlutterBinding.ensureInitialized(); 
+  runApp(const MyApp());
 }
 
-class AhorcadoApp extends StatelessWidget {
-  const AhorcadoApp({super.key});
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Juego del Ahorcado',
+      title: 'El Ahorcado',
+      debugShowCheckedModeBanner: false, 
       theme: ThemeData(
-        primarySwatch: Colors.blue,
+        primarySwatch: Colors.deepPurple, 
+        useMaterial3: true,
       ),
-      // Usamos el nombre de la clase en el archivo 'juego_screen.dart'
-      home: const JuegoScreen(), 
+      home: JuegoAhorcadoPage(), 
     );
   }
 }
