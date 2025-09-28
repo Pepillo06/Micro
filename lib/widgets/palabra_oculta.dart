@@ -3,11 +3,13 @@ import 'package:flutter/material.dart';
 class PalabraOculta extends StatelessWidget {
   final String palabra;
   final List<String> letrasAdivinadas;
+
   const PalabraOculta({
     super.key,
     required this.palabra,
     required this.letrasAdivinadas,
   });
+
   @override
   Widget build(BuildContext context) {
     return Wrap(
@@ -16,6 +18,7 @@ class PalabraOculta extends StatelessWidget {
       runSpacing: 10.0,
       children: palabra.split('').map((letra) {
         String letraAMostrar = letrasAdivinadas.contains(letra) ? letra : '_';
+
         return Text(
           letraAMostrar,
           style: const TextStyle(
